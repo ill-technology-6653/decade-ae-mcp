@@ -11,7 +11,7 @@ This is a fork of [kumoproductions/mcp-aftereffects](https://github.com/kumoprod
 ```bash
 cd ~/Desktop/Apps/AdobeAfterEffects/decade-ae-mcp
 npm install && npm run build
-claude mcp add -s user decade-ae -- node "$PWD/dist/index.js"
+claude mcp add -s user decade-ae -e AE_MCP_ENABLE_EVAL=1 -- node "$PWD/dist/index.js"
 ```
 
 Then in After Effects: Preferences > Scripting & Expressions > turn on "Allow Scripts to Write Files and Access Network". On first use macOS asks to let Terminal (or whichever app hosts Claude Code) control After Effects. Allow it.
