@@ -1,14 +1,32 @@
-![MCP for After Effects](https://raw.githubusercontent.com/kumoproductions/mcp-aftereffects/main/assets/ogp.png)
+# Decade AE MCP
 
-# mcp-aftereffects
+Decade Pictures' in-house MCP server for Adobe After Effects. Lets Claude Code inspect and edit the open AE project: comps, layers, keyframes, effects, expressions, footage relinking, and single-frame renders.
 
-[![CI](https://github.com/kumoproductions/mcp-aftereffects/actions/workflows/ci.yml/badge.svg)](https://github.com/kumoproductions/mcp-aftereffects/actions/workflows/ci.yml)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
-[![Node](https://img.shields.io/badge/node-%3E%3D24-informational)](package.json)
-[![After Effects](https://img.shields.io/badge/After%20Effects-2024%E2%80%932026-informational)](https://www.adobe.com/products/aftereffects.html)
-[![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS-informational)](#requirements)
+This is a fork of [kumoproductions/mcp-aftereffects](https://github.com/kumoproductions/mcp-aftereffects) (MIT). The bridge design and the core operation catalog are theirs. Decade-specific operations live alongside the upstream ones and are marked as such in `docs/TOOLS.md`.
 
-English | [日本語](./README.ja.md)
+**macOS · After Effects 2026 · Node.js 24+ · nothing to install inside After Effects**
+
+## Decade setup
+
+```bash
+cd ~/Desktop/Apps/AdobeAfterEffects/decade-ae-mcp
+npm install && npm run build
+claude mcp add -s user decade-ae -- node "$PWD/dist/index.js"
+```
+
+Then in After Effects: Preferences > Scripting & Expressions > turn on "Allow Scripts to Write Files and Access Network". On first use macOS asks to let Terminal (or whichever app hosts Claude Code) control After Effects. Allow it.
+
+To pull upstream improvements later:
+
+```bash
+git fetch upstream && git merge upstream/main
+```
+
+---
+
+## Upstream documentation
+
+Everything below is the original mcp-aftereffects README, kept for reference.
 
 An MCP server that enables AI to control Adobe After Effects.
 

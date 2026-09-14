@@ -1,16 +1,16 @@
 {
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-  "name": "io.github.kumoproductions/mcp-aftereffects",
-  "description": "MCP server for Adobe After Effects — comp/layer introspection, undo-grouped ops, frame rendering.",
+  "name": "io.github.ill-technology-6653/decade-ae-mcp",
+  "description": "Decade Pictures fork of mcp-aftereffects: MCP server for Adobe After Effects.",
   "repository": {
-    "url": "https://github.com/kumoproductions/mcp-aftereffects",
+    "url": "https://github.com/ill-technology-6653/decade-ae-mcp",
     "source": "github"
   },
   "version": "0.2.0",
   "packages": [
     {
       "registryType": "npm",
-      "identifier": "@kumoproductions/mcp-aftereffects",
+      "identifier": "decade-ae-mcp",
       "version": "0.2.0",
       "transport": {
         "type": "stdio"

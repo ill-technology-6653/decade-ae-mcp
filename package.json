@@ -1,7 +1,8 @@
 {
-  "name": "@kumoproductions/mcp-aftereffects",
+  "name": "decade-ae-mcp",
   "version": "0.2.0",
-  "description": "TypeScript MCP server for Adobe After Effects (Windows & macOS) — project/comp/layer introspection, atomic undo-grouped operations, JSON project export/import, and single-frame rendering via file IPC.",
+  "private": true,
+  "description": "Decade Pictures fork of mcp-aftereffects: MCP server driving Adobe After Effects from Claude Code via file IPC and ExtendScript.",
   "keywords": [
     "adobe",
     "after-effects",
@@ -13,21 +14,21 @@
     "model-context-protocol",
     "motion-graphics"
   ],
-  "homepage": "https://github.com/kumoproductions/mcp-aftereffects#readme",
+  "homepage": "https://github.com/ill-technology-6653/decade-ae-mcp#readme",
   "bugs": {
-    "url": "https://github.com/kumoproductions/mcp-aftereffects/issues"
+    "url": "https://github.com/ill-technology-6653/decade-ae-mcp/issues"
   },
   "license": "MIT",
   "author": {
-    "name": "kumo.productions, Inc.",
-    "url": "https://github.com/kumoproductions"
+    "name": "Decade Pictures",
+    "url": "https://github.com/ill-technology-6653"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/kumoproductions/mcp-aftereffects.git"
+    "url": "git+https://github.com/ill-technology-6653/decade-ae-mcp.git"
   },
   "bin": {
-    "mcp-aftereffects": "dist/index.js"
+    "decade-ae-mcp": "dist/index.js"
   },
   "files": [
     "dist",
@@ -38,10 +39,6 @@
   ],
   "type": "module",
   "main": "dist/index.js",
-  "publishConfig": {
-    "access": "public",
-    "registry": "https://registry.npmjs.org/"
-  },
   "scripts": {
     "build": "tsc",
     "start": "node dist/index.js",

@@ -21,7 +21,7 @@ const { version } = require("../package.json") as { version: string };
 const transport = new FileIpcTransport();
 
 const server = new McpServer({
-  name: "mcp-aftereffects",
+  name: "decade-ae-mcp",
   version,
 });
 
@@ -78,16 +78,16 @@ for (const tool of ALL_TOOLS) {
 }
 
 async function main(): Promise<void> {
-  console.error(`[mcp-aftereffects] policy: ${policySummary()}`);
-  console.error(`[mcp-aftereffects] mailbox: ${RUNTIME_DIR}`);
+  console.error(`[decade-ae-mcp] policy: ${policySummary()}`);
+  console.error(`[decade-ae-mcp] mailbox: ${RUNTIME_DIR}`);
   if (readOnlyMode()) {
     console.error(
-      `[mcp-aftereffects] read-only mode — ${skipped.length > 0 ? `tools withheld: ${skipped.join(", ")}; ` : ""}` +
+      `[decade-ae-mcp] read-only mode — ${skipped.length > 0 ? `tools withheld: ${skipped.join(", ")}; ` : ""}` +
         "ae_do accepts only operations that cannot modify the project.",
     );
   } else {
     console.error(
-      "[mcp-aftereffects] WRITE ACCESS IS ON — tools can create, mutate and delete project content. " +
+      "[decade-ae-mcp] WRITE ACCESS IS ON — tools can create, mutate and delete project content. " +
         "Set AE_MCP_READONLY=1 for inspection-only sessions.",
     );
   }
